@@ -2,7 +2,7 @@ import { useClientQueries } from '@zenstackhq/tanstack-query/react';
 import { LoremIpsum } from 'lorem-ipsum';
 import { schema } from './zenstack/schema-lite';
 
-const lorem = new LoremIpsum({ wordsPerSentence: { max: 6, min: 4 } });
+const lorem = new LoremIpsum({ wordsPerSentence: { min: 3, max: 5 } });
 
 function App() {
     const clientQueries = useClientQueries(schema);
@@ -48,7 +48,7 @@ function App() {
     return (
         <>
             <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-                <main className="flex min-h-screen w-full max-w-3xl flex-col items-center py-32 px-16 bg-white dark:bg-black sm:items-start">
+                <main className="flex min-h-screen w-full max-w-3xl flex-col items-center p-4 bg-white dark:bg-black sm:items-start">
                     <div className="flex flex-col mt-16 items-center gap-6 text-center sm:items-start sm:text-left">
                         <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
                             My Awesome Blog
@@ -79,9 +79,12 @@ function App() {
                             {posts?.map((post) => (
                                 <div key={post.id} className="py-4">
                                     <div className="flex justify-between">
-                                        <h2 className="text-xl font-semibold">
-                                            {post.title}
-                                        </h2>
+                                        <div className="flex flex-col text-left">
+                                            <h2 className="text-lg font-semibold">
+                                                {post.title}
+                                            </h2>
+                                            <p className="text-xs text-gray-500">by {post.author.name}</p>
+                                        </div>
                                         <button
                                             className="ml-4 rounded-md px-2 py-1 text-white cursor-pointer underline text-xs"
                                             onClick={() =>
@@ -91,9 +94,6 @@ function App() {
                                             Delete
                                         </button>
                                     </div>
-                                    <p className="text-sm text-gray-500">
-                                        by {post.author.name}
-                                    </p>
                                 </div>
                             ))}
                         </div>
