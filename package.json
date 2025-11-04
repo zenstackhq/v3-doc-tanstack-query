@@ -33,7 +33,7 @@
         "@types/react-dom": "^19.1.9",
         "@types/sql.js": "^1.4.9",
         "@vitejs/plugin-react": "^5.0.4",
-        "@zenstackhq/cli": "^3.0.0-beta.16",
+        "@zenstackhq/cli": "next",
         "concurrently": "^9.2.1",
         "eslint": "^9.36.0",
         "eslint-plugin-react-hooks": "^5.2.0",
