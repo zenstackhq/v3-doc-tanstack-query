@@ -23,7 +23,7 @@ app.use(
     })
 );
 
-const port = 3000;
+const port = 3100;
 app.listen(port, () => {
     console.log(`Backend listening on port ${port}`);
 });

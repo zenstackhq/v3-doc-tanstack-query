@@ -11,7 +11,10 @@ createRoot(document.getElementById('root')!).render(
     <StrictMode>
         <QueryClientProvider client={queryClient}>
             <QuerySettingsProvider
-                value={{ endpoint: 'http://localhost:3000/api/model' }}
+                value={{ 
+                    // express.js backend
+                    endpoint: 'http://localhost:3100/api/model' 
+                }}
             >
                 <App />
             </QuerySettingsProvider>
