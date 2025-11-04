@@ -1,26 +1,37 @@
 {
-  "name": "v3-doc-tanstack-query",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "eslint"
-  },
-  "dependencies": {
-    "react": "19.2.0",
-    "react-dom": "19.2.0",
-    "next": "16.0.1"
-  },
-  "devDependencies": {
-    "typescript": "^5",
-    "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
-    "@tailwindcss/postcss": "^4",
-    "tailwindcss": "^4",
-    "eslint": "^9",
-    "eslint-config-next": "16.0.1"
-  }
+    "name": "v3-doc-tanstack-query",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "generate": "zen generate --lite",
+        "db:init": "npm run generate && zen db push && npx tsx zenstack/seed.ts",
+        "dev": "next dev",
+        "build": "npm run generate && next build",
+        "start": "next start",
+        "lint": "eslint"
+    },
+    "dependencies": {
+        "@tanstack/react-query": "^5.90.6",
+        "@types/better-sqlite3": "^7.6.13",
+        "@zenstackhq/orm": "next",
+        "@zenstackhq/server": "^3.0.0-beta.16",
+        "@zenstackhq/tanstack-query": "^3.0.0-beta.16",
+        "better-sqlite3": "^12.4.1",
+        "lorem-ipsum": "^2.0.8",
+        "next": "16.0.1",
+        "react": "19.2.0",
+        "react-dom": "19.2.0"
+    },
+    "devDependencies": {
+        "@tailwindcss/postcss": "^4",
+        "@types/node": "^20",
+        "@types/react": "^19",
+        "@types/react-dom": "^19",
+        "@zenstackhq/cli": "next",
+        "eslint": "^9",
+        "eslint-config-next": "16.0.1",
+        "tailwindcss": "^4",
+        "tsx": "^4.20.6",
+        "typescript": "^5"
+    }
 }
