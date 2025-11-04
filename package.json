@@ -4,10 +4,11 @@
     "version": "0.0.0",
     "type": "module",
     "scripts": {
-        "dev": "concurrently \"npm run start-server\" \"npm run start-client\"",
+        "dev": "concurrently \"npm run start-server\" \"npm run start-client\" \"npm run preview\"",
         "generate": "zen generate --lite --schema src/zenstack/schema.zmodel",
         "start-server": "npx tsx src/server.ts",
-        "start-client": "wait-on tcp:3100 && vite --port 3000"
+        "start-client": "wait-on tcp:3100 && vite --port 3000",
+        "preview": "wait-on tcp:3000 && open http://localhost:3000"
     },
     "dependencies": {
         "@tailwindcss/vite": "^4.1.16",
