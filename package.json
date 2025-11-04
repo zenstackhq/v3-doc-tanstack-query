@@ -4,7 +4,7 @@
     "version": "0.0.0",
     "type": "module",
     "scripts": {
-        "dev": "concurrently \"npm run start-client\" \"npm run start-server\"",
+        "dev": "concurrently \"npm run start-server\" \"npm run start-client\"",
         "generate": "zen generate --lite --schema src/zenstack/schema.zmodel",
         "start-server": "npm run generate && npx tsx src/server.ts",
         "start-client": "vite"
