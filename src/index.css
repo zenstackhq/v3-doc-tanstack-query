@@ -18,5 +18,44 @@
 body {
     margin: 0;
     min-width: 320px;
-    min-height: 100vh;
+}
+
+h1 {
+    @apply text-3xl font-semibold
+}
+
+h2 {
+    @apply text-lg font-semibold
+}
+
+main {
+    @apply container flex flex-col px-6 mt-16 items-center gap-6 text-center
+}
+
+.btn {
+    @apply rounded-md bg-blue-600 px-4 py-2 text-white hover:bg-blue-700 cursor-pointer
+}
+
+.btn-link {
+    @apply text-white cursor-pointer underline text-xs
+}
+
+.users {
+    @apply flex flex-col gap-1 p-2
+}
+
+.user {
+    @apply text-sm text-gray-500
+}
+
+.posts {
+    @apply flex flex-col gap-4 container
+}
+
+.post {
+    @apply flex gap-4 justify-between
+}
+
+.author {
+    @apply text-xs text-gray-500
 }
