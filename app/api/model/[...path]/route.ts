@@ -11,4 +11,10 @@ const handler = NextRequestHandler({
     useAppDir: true,
 });
 
-export { handler as DELETE, handler as GET, handler as PATCH, handler as POST, handler as PUT };
+export {
+    handler as DELETE,
+    handler as GET,
+    handler as PATCH,
+    handler as POST,
+    handler as PUT,
+};
