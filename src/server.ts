@@ -1,5 +1,5 @@
-import { SqlJsDialect } from '@zenstackhq/kysely-sql-js';
 import { ZenStackClient, type ClientContract } from '@zenstackhq/orm';
+import { SqlJsDialect } from '@zenstackhq/orm/dialects/sql.js';
 import { RPCApiHandler } from '@zenstackhq/server/api';
 import { ZenStackMiddleware } from '@zenstackhq/server/express';
 import cors from 'cors';
