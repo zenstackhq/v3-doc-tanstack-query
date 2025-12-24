@@ -9,7 +9,7 @@
         "start-server": "npx tsx src/server.ts",
         "start-client": "wait-on tcp:3100 && vite --port 3000",
         "preview": "wait-on tcp:3000 && open http://localhost:3000",
-        "up": "npm i @zenstackhq/cli@next @zenstackhq/orm@next @zenstackhq/server@next @zenstackhq/tanstack-query@next"
+        "up": "npm i @zenstackhq/cli@latest @zenstackhq/orm@latest @zenstackhq/server@latest @zenstackhq/tanstack-query@latest"
     },
     "dependencies": {
         "@tailwindcss/vite": "^4.1.16",
